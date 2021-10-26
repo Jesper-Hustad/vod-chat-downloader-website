@@ -117,7 +117,7 @@
         // var ifrm = document.createElement("iframe");
         document.getElementById("downloadbutton").style = "display: none;"
         var ifrm = document.getElementById("iframeContainer")
-        ifrm.setAttribute("src", "https://player.twitch.tv/?video=v" + vod_id + "&parent=127.0.0.1&autoplay=false");
+        ifrm.setAttribute("src", "https://player.twitch.tv/?video=v" + vod_id + "&parent=vodchatdownload.com&autoplay=false");
         ifrm.setAttribute("allowfullscren", true);
         ifrm.style.width = "852px";
         ifrm.style.height = "480px";
@@ -205,5 +205,16 @@
     .btn:hover {
       background-color: RoyalBlue;
     }
-    </style>
+</style>    
+
+    <!-- HI, thanks for reading the HTML :)  hope you are having a good day -->
+    <!-- For transparancy, analytics captured: file downloads, video plays, reddit link clicks, reaching bottom of page, views -->
+    <!-- Your adblocker probably blocked this anyway tough lol -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-98RHPLJNY6"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){window.dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-98RHPLJNY6');
+    </script>
 </html>
