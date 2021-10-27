@@ -98,7 +98,8 @@
 
         <br><br><br><br><br><br><br><br><br><br>
 
-        <p>For issues and feature requests: <a href="https://www.reddit.com/r/vodchatdownload/">Official subreddit</a></p>    
+        <p>Feel free to read our <a href="/privacy.html" >Privacy Policy</a><br><br>
+            Issues and feature requests at our <a href="https://www.reddit.com/r/vodchatdownload/">Official subreddit</a></p>    
         <small>For direct contact: contact@jesperhustad.com</small>
         <br><br>
         
@@ -165,8 +166,12 @@
 
         countTimer()
 
-        let response = await fetch(`https://cloud-run-bash-example-xqlnmpkfda-uc.a.run.app/${vod_id}/${start_time}/${end_time}`)
-        await response.text()
+        try{
+            let response = await fetch(`https://cloud-run-bash-example-xqlnmpkfda-uc.a.run.app/${vod_id}/${start_time}/${end_time}`)
+            await response.text()
+        }catch(err){
+            alert("sorry something went wrong:\n" + err.message)
+        }
 
         clearInterval(timerVar)
         loading.style = "display: none;"
@@ -210,7 +215,7 @@
     <!-- HI, thanks for reading the HTML :)  hope you are having a good day -->
     <!-- For transparancy, analytics captured: file downloads, video plays, reddit link clicks, reaching bottom of page, views -->
     <!-- Your adblocker probably blocked this anyway tough lol -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-98RHPLJNY6"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-98RHPLJNY6&aip=1"></script>
     <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){window.dataLayer.push(arguments);}
