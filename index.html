@@ -23,7 +23,7 @@
         <h1> VOD and chat downloader <img src="favicon.png" alt="logo" style="width: 50px;"></h1> 
         <p>
         Download a twitch vod with chat in the top right corner. <br>
-        Videos are limited to 10 minutes for cost reasons.<br>
+        Videos are limited to 15 minutes for cost reasons.<br>
         Found the site helpfull? Show support and I will spend more time on development :)<br>
         Here is an example of how the VOD will look like:<br>
         </p>
@@ -136,7 +136,7 @@
         const start_time = parseInt(document.getElementById("start-h").value) * (60*60) + parseInt(document.getElementById("start-m").value) * 60 + parseInt(document.getElementById("start-s").value)
         const end_time = parseInt(document.getElementById("end-h").value) * (60*60) + parseInt(document.getElementById("end-m").value) * 60 + parseInt(document.getElementById("end-s").value)
 
-        if((end_time - start_time) > (60 * 10)){
+        if((end_time - start_time) > (60 * 15)){
             alert("Max 10 Minute Video (sorry, this is for cost reasons)")
             return
         }
